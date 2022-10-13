@@ -15,10 +15,11 @@ const forecast = (longitute, latitute, callback) => {
     else{
       callback(undefined, body.current.weather_descriptions[0] +
       ". It is currently " + body.current.temperature +
-      " degree out. It feels like " + body.current.feelslike +
-      " degree out.");
+      "°C. It feels like " + body.current.feelslike +
+      "°C out. The humidity today is " + body.current.humidity + '%');
     }
   })
 }
+
 
 module.exports = forecast;
